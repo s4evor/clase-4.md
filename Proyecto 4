@@ -1,0 +1,198 @@
+Proyecto · Clase 4
+
+IA generativa para distintos problemas
+
+Caso: Leo ordena su bandeja de correos y prepara respuestas base.
+Empresa: Tienda Pino Real
+Rol: Leo, Atención a clientes.
+
+---
+
+1. Mi proceso
+
+Para organizar los correos utilicé un asistente de IA y dividí el trabajo en diferentes pasos:
+
+Paso| Tipo de tarea| ¿Qué le pedí a la IA?
+1| Resumir| Leer los 10 correos y explicar brevemente qué necesitaba cada cliente.
+2| Extraer| Identificar nombres, números de pedido, fechas, productos y problemas.
+3| Clasificar| Organizar los correos por categorías y nivel de urgencia.
+4| Redactar| Elaborar respuestas base respetando las políticas de la tienda.
+5| Revisar| Comparar las respuestas con las políticas para evitar errores o promesas que no se pueden cumplir.
+
+El objetivo fue ahorrar tiempo, evitar repetir respuestas y atender primero los asuntos más importantes.
+
+2. Mi clasificación
+
+Definí 6 categorías para organizar los 10 correos.
+
+Correo| Categoría| Urgencia| Razón
+1. Patricia| Seguimiento de pedido| Media| Quiere conocer la ubicación de su licuadora.
+2. Héctor| Producto dañado o incompleto| Alta| Recibió un horno golpeado y adjuntó fotografías.
+3. Daniela| Facturación| Media| Solicita una factura de una compra realizada en septiembre.
+4. Julián| Cambios y devoluciones| Media| Quiere cambiar el color de sus sábanas y están sin abrir.
+5. Silvia| Queja formal| Muy alta| Amenaza con presentar una queja ante Profeco.
+6. Andrés| Información de compra| Baja| Pregunta por la disponibilidad de una cafetera y el tiempo de envío.
+7. Fernanda| Cobro duplicado| Alta| Reporta dos cobros iguales y solicita la devolución de uno.
+8. Rodrigo| Cancelación| Alta| Necesita cancelar su pedido por un error en la dirección.
+9. Lucía| Facturación y producto incompleto| Alta| Solicita factura y reporta que faltan los tornillos del librero.
+10. Mauricio| Reembolso y queja| Alta| Solicita que le devuelvan su dinero y que no vuelvan a contactarlo.
+
+Correos que pueden entrar en más de una categoría
+
+- Correo 9: corresponde a facturación y producto incompleto.
+- Correo 10: corresponde a reembolso y queja, por lo que necesita revisión humana.
+- Correo 5: aunque parece un seguimiento de pedido, se clasifica como queja formal por la mención de Profeco.
+
+3. Mis respuestas base
+
+Preparé respuestas que pueden reutilizarse, dejando entre corchetes los datos que deben revisarse antes de enviarlas.
+
+Categoría 1. Seguimiento de pedidos y consultas
+
+Para los correos 1 y 6.
+
+«Hola, [nombre]:
+
+Gracias por comunicarte con Tienda Pino Real.
+
+Sobre tu consulta, te compartimos la siguiente información:
+
+- Estatus de tu pedido: [estatus del pedido].
+- Fecha estimada de entrega: [fecha estimada].
+- Información adicional: [disponibilidad del producto o color].
+
+Los tiempos de envío son de 3 a 5 días hábiles en ciudades principales y de 5 a 8 días hábiles en el resto del país.
+
+Quedamos atentos a cualquier otra duda.
+
+Saludos,
+Atención a clientes
+Tienda Pino Real»
+
+Categoría 2. Productos dañados o incompletos
+
+Para los correos 2 y 9.
+
+«Hola, [nombre]:
+
+Lamentamos que tu pedido haya llegado con un problema.
+
+De acuerdo con nuestras políticas, los productos dañados o incompletos pueden reponerse sin costo, siempre que se reporten dentro de los primeros 3 días naturales después de recibirlos y se adjunten fotografías.
+
+Ya contamos con [fotografías recibidas / fotografías pendientes].
+
+Vamos a revisar tu caso para continuar con el proceso de reposición.
+
+Gracias por tu comprensión.
+
+Saludos,
+Atención a clientes
+Tienda Pino Real»
+
+Categoría 3. Facturación
+
+Para los correos 3 y 9.
+
+«Hola, [nombre]:
+
+Gracias por solicitar tu factura.
+
+Para poder emitirla necesitamos verificar que la solicitud se encuentre dentro del mismo mes en que realizaste tu compra y contar con tus datos fiscales.
+
+Hemos recibido [datos fiscales recibidos / datos fiscales pendientes].
+
+Una vez verificada la información, podremos continuar con el proceso.
+
+Saludos,
+Atención a clientes
+Tienda Pino Real»
+
+Categoría 4. Cambios, cancelaciones y devoluciones
+
+Para los correos 4 y 8.
+
+«Hola, [nombre]:
+
+Gracias por comunicarte con nosotros.
+
+Te compartimos las condiciones correspondientes a tu solicitud:
+
+- Los cambios y devoluciones pueden realizarse hasta 15 días naturales después de recibir el producto, siempre que esté sin uso y en su empaque.
+- Las cancelaciones solamente se pueden realizar si el pedido todavía no ha salido del almacén.
+- Si el pedido ya fue enviado, se deberá realizar el proceso de devolución.
+
+Estatus del pedido: [estatus del pedido].
+
+De acuerdo con esta información, [siguiente paso correspondiente a la solicitud].
+
+Saludos,
+Atención a clientes
+Tienda Pino Real»
+
+Categoría 5. Cobros duplicados
+
+Para el correo 7.
+
+«Hola, [nombre]:
+
+Lamentamos el inconveniente con tu cobro.
+
+Vamos a revisar el movimiento reportado. Este proceso puede tomar hasta 2 días hábiles.
+
+Si se confirma que hubo un cobro duplicado, el banco realizará la devolución del cobro extra en un periodo de 3 a 5 días hábiles.
+
+Por seguridad, nunca solicitamos números completos de tarjetas, contraseñas ni códigos de seguridad por correo.
+
+Gracias por tu paciencia.
+
+Saludos,
+Atención a clientes
+Tienda Pino Real»
+
+Categoría 6. Quejas formales
+
+Para el correo 5.
+
+Este tipo de casos no debe contestarse con una respuesta automática, porque las políticas indican que las quejas formales y las menciones de autoridades deben ser atendidas por la supervisora Marcela Reyes el mismo día.
+
+Formato interno para canalizar el caso:
+
+«Asunto: Atención urgente - Queja formal
+
+Supervisora Marcela Reyes:
+
+Se recibe una queja del cliente [nombre], relacionada con el pedido [número de pedido].
+
+El cliente manifiesta que no ha recibido respuesta a sus mensajes anteriores y menciona que presentará una queja ante Profeco.
+
+Se solicita revisar el caso y darle atención el mismo día, de acuerdo con las políticas de Tienda Pino Real.
+
+Atención a clientes.»
+
+4. Lo que no resuelve una respuesta base
+
+No todos los correos pueden solucionarse automáticamente. Algunos necesitan que una persona revise la información antes de responder.
+
+Correo| ¿Por qué necesita atención humana?
+2. Héctor| Se deben revisar las fotografías y gestionar la reposición del horno.
+5. Silvia| Es una queja formal que debe atender Marcela Reyes el mismo día.
+7. Fernanda| Se debe comprobar si realmente hubo un cobro duplicado antes de confirmar un reembolso.
+8. Rodrigo| Se necesita verificar si el pedido todavía está en el almacén o ya salió.
+9. Lucía| Se deben atender dos solicitudes diferentes: la factura y la reposición de los tornillos.
+10. Mauricio| Se necesita revisar el historial del pedido, el motivo del reembolso y su situación antes de tomar una decisión.
+
+También revisaría el correo 3 para confirmar que todavía se encuentra dentro del mes de compra, ya que después de ese periodo no se puede emitir la factura.
+
+5. Mi revisión
+
+Al comparar las respuestas con las políticas de Tienda Pino Real, encontré que algunas podían prometer un reembolso o una cancelación sin comprobar primero el estado del pedido.
+
+Corregí eso agregando espacios para verificar la información antes de responder. También confirmé que las quejas formales deben pasar directamente con Marcela Reyes y que nunca se deben solicitar datos bancarios confidenciales por correo.
+
+---
+
+Conclusión
+
+La IA generativa puede ayudar a organizar grandes cantidades de correos, identificar problemas y preparar respuestas en menos tiempo. Sin embargo, no debe sustituir por completo a las personas, ya que existen casos que necesitan revisión y decisiones humanas.
+
+Mi conclusión es que la IA funciona mejor como una herramienta de apoyo para el personal de atención a clientes, no como un reemplazo de su trabajo.
